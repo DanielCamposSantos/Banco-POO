@@ -2,6 +2,12 @@ package org.ucsal.poo.pf20252.br;
 
 public class ContaPoupança extends Conta {
 
+	public ContaPoupança(long numero, double saldo) {
+		super(numero, saldo);
+	}
+
+	
+	/*
 	public double atualizarSaldo(double valor, int op) {
 		if (op == 1) {
 			setSaldo(depositar(valor)) ;
@@ -14,4 +20,5 @@ public class ContaPoupança extends Conta {
 		}
 		return getSaldo();
 	}
+	*/
 }
