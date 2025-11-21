@@ -19,11 +19,12 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage stageInicial) throws IOException {
         stage = stageInicial;
-        Parent fxmlMain = FXMLLoader.load(MainApplication.class.getResource("main.fxml"));
-        telaInicial = new Scene(fxmlMain, 640,400);
 
-        Parent fxmlSegunda = FXMLLoader.load(MainApplication.class.getResource("segunda.fxml"));
-        telaSegundaria =  new Scene(fxmlSegunda, 640,400);
+        Parent fxmlMain = FXMLLoader.load(MainApplication.class.getResource("main.fxml"));
+        telaInicial = new Scene(fxmlMain);
+        telaInicial.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
+
+
 
         stageInicial.setTitle("Tela inicial");
         stageInicial.setScene(telaInicial);

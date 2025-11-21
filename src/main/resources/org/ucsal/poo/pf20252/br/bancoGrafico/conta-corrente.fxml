@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Priority?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      alignment="CENTER"
+      spacing="80.0"
+      styleClass="root-container">
+
+    <padding>
+        <Insets top="30.0" right="30.0" bottom="30.0" left="30.0" />
+    </padding>
+
+    <!-- Header Corrigido -->
+    <HBox alignment="CENTER" spacing="200.0">
+        <!-- Logo e Título -->
+        <VBox alignment="CENTER" spacing="10.0">
+            <ImageView fitWidth="120" fitHeight="60" preserveRatio="true">
+                <Image url="@images/logo.png" />
+            </ImageView>
+            <Label text="Java-Bank" styleClass="header-title" />
+        </VBox>
+
+        <!-- Opções (canto superior direito) -->
+        <HBox alignment="CENTER_RIGHT" spacing="23.0" styleClass="opcoes-container">
+            <ImageView fitWidth="24" fitHeight="24" preserveRatio="true">
+                <Image url="@images/sino.png" />
+            </ImageView>
+            <ImageView fitWidth="24" fitHeight="24" preserveRatio="true">
+                <Image url="@images/menu.png" />
+            </ImageView>
+        </HBox>
+    </HBox>
+
+    <!-- Main Content -->
+    <VBox alignment="CENTER" spacing="80.0">
+        <!-- Saldo Box Corrigido -->
+        <HBox styleClass="saldo-box" alignment="CENTER">
+            <HBox HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                <VBox spacing="5.0">
+                    <Label text="Saldo" styleClass="saldo-label" />
+                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                        <Label text="R$" styleClass="moeda-label" />
+                        <Label text="*****" styleClass="saldo-value" fx:id="saldoConta" />
+                    </HBox>
+                </VBox>
+            </HBox>
+            <Button styleClass="olho-button" fx:id="olhoButton">
+                <graphic>
+                    <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                        <Image url="@images/olho.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+
+        <!-- Botões de Tarefas Corrigidos -->
+        <HBox alignment="CENTER" spacing="80.0" styleClass="botoes-tarefas-container">
+            <!-- Sacar -->
+            <VBox alignment="CENTER" spacing="7.0" styleClass="btn-box">
+                <Button styleClass="botoes-tarefas">
+                    <graphic>
+                        <ImageView fitWidth="30" fitHeight="30" preserveRatio="true">
+                            <Image url="@images/sacar.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label text="Sacar" styleClass="btn-label" />
+            </VBox>
+
+            <!-- Depositar -->
+            <VBox alignment="CENTER" spacing="7.0" styleClass="btn-box">
+                <Button styleClass="botoes-tarefas">
+                    <graphic>
+                        <ImageView fitWidth="30" fitHeight="30" preserveRatio="true">
+                            <Image url="@images/depositar.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label text="Depositar" styleClass="btn-label" />
+            </VBox>
+
+            <!-- Transferir -->
+            <VBox alignment="CENTER" spacing="7.0" styleClass="btn-box">
+                <Button styleClass="botoes-tarefas">
+                    <graphic>
+                        <ImageView fitWidth="30" fitHeight="30" preserveRatio="true">
+                            <Image url="@images/transferir.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label text="Transferir" styleClass="btn-label" />
+            </VBox>
+        </HBox>
+    </VBox>
+</VBox>
