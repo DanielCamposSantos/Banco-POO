@@ -13,7 +13,7 @@
     -fx-font-size: 18px;
 }
 
-/* Opções no canto superior direito */
+
 .opcoes-container {
     -fx-alignment: center-right;
 }
@@ -79,7 +79,7 @@
     -fx-spacing: 7px;
 }
 
-/* Botões de Tarefas Corrigidos */
+
 .botoes-tarefas {
     -fx-background-color: #333;
     -fx-background-radius: 15px;

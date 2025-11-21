@@ -3,8 +3,12 @@ package org.ucsal.poo.pf20252.br;
 public abstract class Conta {
 	
 	long numero;
-	private double saldo;
-	
+	private double saldo = 0;
+
+	public Conta(double saldo) {
+		this.saldo = saldo;
+	}
+
 	public double getSaldo() {
 		return saldo;
 	}

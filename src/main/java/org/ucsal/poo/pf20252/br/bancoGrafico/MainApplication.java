@@ -4,7 +4,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.ucsal.poo.pf20252.br.Conta;
+import org.ucsal.poo.pf20252.br.ContaCorrente;
+import org.ucsal.poo.pf20252.br.ContaPoupanca;
+import org.ucsal.poo.pf20252.br.Telas;
 
 import java.io.IOException;
 
@@ -12,35 +17,76 @@ public class MainApplication extends Application {
     private static Stage stage;
 
     private static Scene telaInicial;
-    private static Scene telaSegundaria;
+    private static Scene conta;
+    private static Scene sacar;
 
+    private static Conta contaCorrente = new ContaCorrente(1234.45);
+    private static Conta contaPoupanca = new ContaPoupanca(789.10);
+    private static ContaController contaController;
+    private static SacarController sacarController;
 
+    public static ContaController getContaController() {
+        return contaController;
+    }
 
     @Override
     public void start(Stage stageInicial) throws IOException {
+        Image icon = new Image(getClass().getResourceAsStream("images/logo-icon.png"));
         stage = stageInicial;
+        stage.getIcons().add(icon);
 
-        Parent fxmlMain = FXMLLoader.load(MainApplication.class.getResource("main.fxml"));
+        FXMLLoader loaderMain = new FXMLLoader(MainApplication.class.getResource("TelaInicial.fxml"));
+        Parent fxmlMain = loaderMain.load();
         telaInicial = new Scene(fxmlMain);
-        telaInicial.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
+
+        FXMLLoader loaderConta = new FXMLLoader(MainApplication.class.getResource("TelaConta.fxml"));
+        Parent fxmlConta = loaderConta.load();
+        contaController = loaderConta.getController();
+        conta = new Scene(fxmlConta);
 
 
+        FXMLLoader loaderSacar = new FXMLLoader(MainApplication.class.getResource("TelaSacar.fxml"));
+        Parent fxmlSacar = loaderSacar.load();
+        sacarController = loaderSacar.getController();
+        sacar = new Scene(fxmlSacar);
 
-        stageInicial.setTitle("Tela inicial");
+        stageInicial.setTitle("JavaBank");
         stageInicial.setScene(telaInicial);
         stageInicial.show();
     }
 
-    public static void changeScreen(String novaTela){
-        switch (novaTela){
-            case "main" -> stage.setScene(telaInicial);
-            case "segunda" -> stage.setScene(telaSegundaria);
+    public static void changeScreen(Telas tela){
+        switch (tela){
+            case CONTA -> stage.setScene(conta);
+            case SACAR -> stage.setScene(sacar);
+
             default -> System.err.println("Tela inesistente");
+        }
+    }
+
+    public static void changeScreen(Telas tela, Conta contaAlvo) {
+        switch (tela) {
+            case CONTA -> {
+                contaController.setContaAlvo(contaAlvo);
+                stage.setScene(conta);
+            }
+            case SACAR -> {
+                sacarController.setContaAlvo(contaAlvo);
+                stage.setScene(sacar);
+            }
+            default -> System.err.println("Tela inexistente");
         }
     }
 
 
 
+    public static Conta getContaCorrente() {
+        return contaCorrente;
+    }
+
+    public static Conta getContaPoupanca() {
+        return contaPoupanca;
+    }
 
     public static void main(String[] args) {
         launch();
