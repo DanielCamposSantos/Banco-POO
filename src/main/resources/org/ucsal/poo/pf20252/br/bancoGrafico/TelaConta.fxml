@@ -11,9 +11,7 @@
         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
     </padding>
 
-    <!-- Header Corrigido -->
     <HBox alignment="CENTER" spacing="200.0">
-        <!-- Logo e Título -->
         <VBox alignment="CENTER" spacing="10.0">
             <ImageView fitHeight="60" fitWidth="120" preserveRatio="true">
                 <Image url="@images/logo.png" />
@@ -21,7 +19,6 @@
             <Label styleClass="header-title" text="Java-Bank" />
         </VBox>
 
-        <!-- Opções (canto superior direito) -->
         <HBox alignment="CENTER_RIGHT" spacing="23.0" styleClass="opcoes-container">
             <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
                 <Image url="@images/sino.png" />
@@ -36,9 +33,7 @@
         </HBox>
     </HBox>
 
-    <!-- Main Content -->
     <VBox alignment="CENTER" spacing="80.0">
-        <!-- Saldo Box Corrigido -->
         <HBox alignment="CENTER" styleClass="saldo-box">
             <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
                 <VBox spacing="5.0">
@@ -58,9 +53,7 @@
             </Button>
         </HBox>
 
-        <!-- Botões de Tarefas Corrigidos -->
         <HBox alignment="CENTER" spacing="80.0" styleClass="botoes-tarefas-container">
-            <!-- Sacar -->
             <VBox alignment="CENTER" spacing="7.0" styleClass="btn-box">
                 <Button fx:id="sacarBtn" onAction="#onSacarBtnClick" styleClass="botoes-tarefas">
                     <graphic>
@@ -72,7 +65,6 @@
                 <Label styleClass="btn-label" text="Sacar" />
             </VBox>
 
-            <!-- Depositar -->
             <VBox alignment="CENTER" spacing="7.0" styleClass="btn-box">
                 <Button fx:id="depositarBtn" onAction="#onDepositarBtnClick" styleClass="botoes-tarefas">
                     <graphic>
@@ -84,7 +76,6 @@
                 <Label styleClass="btn-label" text="Depositar" />
             </VBox>
 
-            <!-- Transferir -->
             <VBox alignment="CENTER" spacing="7.0" styleClass="btn-box">
                 <Button fx:id="transferirBtn" onAction="#onTransferirBtnClick" styleClass="botoes-tarefas">
                     <graphic>

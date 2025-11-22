@@ -20,16 +20,18 @@ public class MainApplication extends Application {
     private static Scene conta;
     private static Scene sacar;
     private static Scene depositar;
+    private static Scene transferir;
 
-    private static Conta contaCorrente = new ContaCorrente(1234.45);
-    private static Conta contaPoupanca = new ContaPoupanca(789.10);
+
     private static ContaController contaController;
     private static SacarController sacarController;
     private static DepositarController depositarController;
+    private static TransferirController transferirController;
 
-    public static ContaController getContaController() {
-        return contaController;
-    }
+
+    private static Conta contaCorrente = new ContaCorrente(1234.45);
+    private static Conta contaPoupanca = new ContaPoupanca(789.10);
+
 
     @Override
     public void start(Stage stageInicial) throws IOException {
@@ -57,6 +59,12 @@ public class MainApplication extends Application {
         depositarController = loaderDepositar.getController();
         depositar = new Scene(fxmlDepositar);
 
+        FXMLLoader loaderTransferir = new FXMLLoader(MainApplication.class.getResource("TelaTransferir.fxml"));
+        Parent fxmlTransferir = loaderTransferir.load();
+        transferirController = loaderTransferir.getController();
+        transferir = new Scene(fxmlTransferir);
+
+
         stageInicial.setTitle("JavaBank");
         stageInicial.setScene(telaInicial);
         stageInicial.show();
@@ -68,6 +76,7 @@ public class MainApplication extends Application {
             case CONTA -> stage.setScene(conta);
             case SACAR -> stage.setScene(sacar);
             case DEPOSITAR -> stage.setScene(depositar);
+            case TRANSFERIR -> stage.setScene(transferir);
 
             default -> System.err.println("Tela inesistente");
         }
@@ -86,6 +95,10 @@ public class MainApplication extends Application {
             case DEPOSITAR -> {
                 depositarController.setContaAlvo(contaAlvo);
                 stage.setScene(depositar);
+            }
+            case TRANSFERIR -> {
+                transferirController.setContaAlvo(contaAlvo);
+                stage.setScene(transferir);
             }
             default -> System.err.println("Tela inexistente");
         }
