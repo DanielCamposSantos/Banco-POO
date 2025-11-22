@@ -22,15 +22,15 @@ public class MainApplication extends Application {
     private static Scene depositar;
     private static Scene transferir;
 
-
+    private static InicioController inicioController;
     private static ContaController contaController;
     private static SacarController sacarController;
     private static DepositarController depositarController;
     private static TransferirController transferirController;
 
 
-    private static Conta contaCorrente = new ContaCorrente(1234.45);
-    private static Conta contaPoupanca = new ContaPoupanca(789.10);
+    private static Conta contaCorrente = new ContaCorrente(123,10000);
+    private static Conta contaPoupanca = new ContaPoupanca(456,16.45);
 
 
     @Override
@@ -41,6 +41,7 @@ public class MainApplication extends Application {
 
         FXMLLoader loaderMain = new FXMLLoader(MainApplication.class.getResource("TelaInicial.fxml"));
         Parent fxmlMain = loaderMain.load();
+        inicioController = loaderMain.getController();
         telaInicial = new Scene(fxmlMain);
 
         FXMLLoader loaderConta = new FXMLLoader(MainApplication.class.getResource("TelaConta.fxml"));
