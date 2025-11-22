@@ -16,7 +16,6 @@ public abstract class Conta implements Operavel {
 	}
 
 	public void depositar(double valor) throws IllegalArgumentException{
-
 		if (valor <=0){
 			throw new IllegalArgumentException();
 		}
@@ -25,7 +24,6 @@ public abstract class Conta implements Operavel {
     }
 
 	public void sacar() {
-
         try {
             Scanner saq = new Scanner(System.in);
             System.out.println("Digite o valor do saque: ");

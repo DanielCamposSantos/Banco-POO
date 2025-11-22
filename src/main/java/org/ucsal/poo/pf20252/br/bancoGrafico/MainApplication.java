@@ -22,7 +22,6 @@ public class MainApplication extends Application {
     private static Scene depositar;
     private static Scene transferir;
 
-    private static InicioController inicioController;
     private static ContaController contaController;
     private static SacarController sacarController;
     private static DepositarController depositarController;
@@ -41,7 +40,6 @@ public class MainApplication extends Application {
 
         FXMLLoader loaderMain = new FXMLLoader(MainApplication.class.getResource("TelaInicial.fxml"));
         Parent fxmlMain = loaderMain.load();
-        inicioController = loaderMain.getController();
         telaInicial = new Scene(fxmlMain);
 
         FXMLLoader loaderConta = new FXMLLoader(MainApplication.class.getResource("TelaConta.fxml"));
