@@ -10,10 +10,13 @@ public class ContaCorrente extends Conta {
 
 	@Override
 	public void transferir(double valor, Conta destino)  throws ValorInvalidoException{
-		if (valor > (getSaldo() + LIMITE_SAQUE_ESPECIAL) || valor <=0){
+		if (valor > (getSaldo() + LIMITE_SAQUE_ESPECIAL) || valor <=0) {
 			throw new ValorInvalidoException();
 		}
+
 		setSaldo(getSaldo() - valor);
+		destino.setSaldo(destino.getSaldo() + valor);
+
 	}
 	
 	@Override

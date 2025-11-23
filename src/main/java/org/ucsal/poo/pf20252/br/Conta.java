@@ -3,7 +3,7 @@ package org.ucsal.poo.pf20252.br;
 import javafx.scene.control.Label;
 
 public abstract class Conta implements Operavel {
-	long numero;
+	private long numero;
 	private boolean saldoVisivel = false;
 	private double saldo;
 	private Cliente cliente;
@@ -31,11 +31,12 @@ public abstract class Conta implements Operavel {
 
 
 	@Override
-	public void transferir(double valor, Conta destino) throws ValorInvalidoException{
+	public void transferir(double valor,Conta destino) throws ValorInvalidoException{
 		if (valor > saldo || valor <=0) {
 			throw new ValorInvalidoException();
 		}
-		saldo -= valor;
+
+		this.saldo -= valor;
 		destino.saldo += valor;
 
 	}
@@ -58,9 +59,13 @@ public abstract class Conta implements Operavel {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
-	
+
 	public double getSaldo() {
 		return saldo;
+	}
+
+	public long getNumero() {
+		return numero;
 	}
 
 	public Cliente getCliente() {

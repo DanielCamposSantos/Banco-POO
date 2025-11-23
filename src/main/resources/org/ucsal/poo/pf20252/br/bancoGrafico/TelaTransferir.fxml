@@ -80,7 +80,7 @@
             <TextField fx:id="numConta" promptText="Digite um valor" styleClass="campo-input" />
             <Label styleClass="campo-label" text="Digite quanto deseja transferir:" />
             <TextField fx:id="campoInput" promptText="Digite um valor" styleClass="campo-input" />
-            <Button styleClass="btn-confirmar" text="Transferir" />
+            <Button onAction="#transferirBtn" styleClass="btn-confirmar" text="Transferir" />
         </VBox>
     </VBox>
 </VBox>
