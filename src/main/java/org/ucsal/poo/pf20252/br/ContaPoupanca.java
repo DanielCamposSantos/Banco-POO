@@ -10,7 +10,7 @@ public class ContaPoupanca extends Conta {
     }
 
 
-
+    @Override
     public void atualizarSaldo() {
 		setSaldo(getSaldo() + getSaldo()*TAXA_DE_JUROS);
 	}

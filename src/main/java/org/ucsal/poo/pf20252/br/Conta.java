@@ -49,7 +49,9 @@ public abstract class Conta implements Operavel {
 
 	}
 
-
+	public void atualizarSaldo() {
+		
+	}
 
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
