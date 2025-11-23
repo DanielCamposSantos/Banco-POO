@@ -4,8 +4,8 @@ public class ContaCorrente extends Conta {
 
 	private final double LIMITE_SAQUE_ESPECIAL = 2000;
 
-	public ContaCorrente(long numero, double saldo)  {
-		super(numero, saldo);
+	public ContaCorrente(long numero, double saldo, Cliente cliente) {
+		super(numero, saldo, cliente);
 	}
 
 	@Override

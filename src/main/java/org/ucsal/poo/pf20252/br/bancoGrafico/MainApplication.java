@@ -6,10 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import org.ucsal.poo.pf20252.br.Conta;
-import org.ucsal.poo.pf20252.br.ContaCorrente;
-import org.ucsal.poo.pf20252.br.ContaPoupanca;
-import org.ucsal.poo.pf20252.br.Telas;
+import org.ucsal.poo.pf20252.br.*;
 
 import java.io.IOException;
 
@@ -39,8 +36,10 @@ public class MainApplication extends Application {
     private static TransferirController transferirController;
 
 
-    private static Conta contaCorrente = new ContaCorrente(123,10000);
-    private static Conta contaPoupanca = new ContaPoupanca(456,16.45);
+    private static Conta contaCorrente = new ContaCorrente(123,10000,
+            new Cliente("045.789.456-71","Avenida Paralela 1234","Pedro Alcântara"));
+    private static Conta contaPoupanca = new ContaPoupanca(456,16.45,
+            new Cliente("756.348.497-81","Avenida Luiz Eduardo Magalhães 7894","Vitor Araujo"));
 
     /**
      * Metodo que inicia o carregamento das telas no JavaFX
@@ -116,6 +115,7 @@ public class MainApplication extends Application {
         switch (tela) {
             case CONTA -> {
                 contaController.setContaAlvo(contaAlvo);
+                contaController.mensagemBoasVindas(contaAlvo.getCliente().getNome());
                 stage.setScene(conta);
             }
             case SACAR -> {

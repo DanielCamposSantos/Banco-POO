@@ -4,11 +4,10 @@ package org.ucsal.poo.pf20252.br;
 public class ContaPoupanca extends Conta {
 	
 	private final double TAXA_DE_JUROS = 0.005;
-	
-    public ContaPoupanca(long numero, double saldo) {
-        super(numero, saldo);
-    }
 
+    public ContaPoupanca(long numero, double saldo, Cliente cliente) {
+        super(numero, saldo, cliente);
+    }
 
     @Override
     public void atualizarSaldo() {

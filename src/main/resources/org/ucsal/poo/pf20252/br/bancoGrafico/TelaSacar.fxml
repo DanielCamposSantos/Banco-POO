@@ -11,24 +11,24 @@
         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
     </padding>
 
-    <!-- Header Corrigido -->
     <HBox alignment="CENTER" prefHeight="100">
-        <!-- Operação no canto esquerdo -->
         <VBox alignment="CENTER_LEFT" styleClass="operacao-container">
             <HBox alignment="CENTER_LEFT" spacing="5.0">
-                <HBox styleClass="imagem-operacao">
-                    <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
-                        <Image url="@images/sacar.png" />
-                    </ImageView>
-                </HBox>
-                <Label styleClass="operacao-label" text="Olá USUÁRIO,&#10;Saque já" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                      <HBox styleClass="imagem-operacao">
+                          <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
+                              <Image url="@images/sacar.png" />
+                          </ImageView>
+                      </HBox>
+                      <Label alignment="CENTER" contentDisplay="CENTER" styleClass="operacao-label" text="Saque já" />
+               </children>
+            </VBox>
             </HBox>
         </VBox>
 
-        <!-- Espaço central para forçar o posicionamento -->
         <Region HBox.hgrow="ALWAYS" />
 
-        <!-- Logo e Título no centro -->
         <VBox alignment="CENTER" spacing="10.0">
             <ImageView fitHeight="60" fitWidth="120" preserveRatio="true">
                 <Image url="@images/logo.png" />
@@ -36,10 +36,8 @@
             <Label styleClass="header-title" text="Java-Bank" />
         </VBox>
 
-        <!-- Espaço central para forçar o posicionamento -->
         <Region HBox.hgrow="ALWAYS" />
 
-        <!-- Opções no canto superior direito -->
         <VBox alignment="CENTER_RIGHT" styleClass="opcoes-container">
             <HBox alignment="CENTER_RIGHT" spacing="23.0">
                 <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
@@ -56,9 +54,7 @@
         </VBox>
     </HBox>
 
-    <!-- Main Content -->
     <VBox alignment="CENTER" spacing="80.0">
-        <!-- Saldo Box -->
         <HBox alignment="CENTER" styleClass="saldo-box">
             <HBox styleClass="saldo-container" HBox.hgrow="ALWAYS">
                 <VBox spacing="5.0">

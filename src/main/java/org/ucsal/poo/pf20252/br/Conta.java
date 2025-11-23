@@ -6,10 +6,12 @@ public abstract class Conta implements Operavel {
 	long numero;
 	private boolean saldoVisivel = false;
 	private double saldo;
+	private Cliente cliente;
 
-	public Conta(long numero, double saldo) {
+	public Conta(long numero, double saldo, Cliente cliente) {
 		this.numero = numero;
 		this.saldo = saldo;
+		this.cliente = cliente;
 	}
 
 	public void depositar(double valor) throws ValorInvalidoException{
@@ -59,6 +61,10 @@ public abstract class Conta implements Operavel {
 	
 	public double getSaldo() {
 		return saldo;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
 	}
 }
 

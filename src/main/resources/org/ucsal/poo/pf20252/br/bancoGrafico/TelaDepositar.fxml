@@ -14,12 +14,16 @@
     <HBox alignment="CENTER" prefHeight="100">
         <VBox alignment="CENTER_LEFT" styleClass="operacao-container">
             <HBox alignment="CENTER_LEFT" spacing="5.0">
-                <HBox styleClass="imagem-operacao">
-                    <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
-                        <Image url="@images/depositar.png" />
-                    </ImageView>
-                </HBox>
-                <Label styleClass="operacao-label" text="Olá USUÁRIO,&#10;Deposite já" />
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <HBox styleClass="imagem-operacao">
+                            <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
+                                <Image url="@images/depositar.png" />
+                            </ImageView>
+                        </HBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="operacao-label" text="Deposite já" />
+                    </children>
+                </VBox>
             </HBox>
         </VBox>
 

@@ -5,7 +5,6 @@ import org.ucsal.poo.pf20252.br.Conta;
 import org.ucsal.poo.pf20252.br.Telas;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -22,8 +21,8 @@ import javafx.scene.control.TextField;
 public abstract class GeraisController  {
     private Conta contaAlvo;
     @FXML private Label saldoConta;
-    @FXML private Button olhoButton;
     @FXML private TextField campoInput;
+    @FXML private Label boasVindas;
 
     /**
      * Aciona a consulta do saldo da conta alvo.
@@ -43,6 +42,17 @@ public abstract class GeraisController  {
         esconderSaldo();
         MainApplication.changeScreen(Telas.INICIAL);
     }
+
+    /**
+     * Exibe uma mensagem de boas personalizada para a conta alvo
+     * @param nomeCliente Nome do cliente que será exibido na mensagem
+     */
+    public void mensagemBoasVindas(String nomeCliente){
+        String primeiroNome = nomeCliente.split(" ")[0];
+        boasVindas.setText("Olá " + primeiroNome + "!");
+    }
+
+
 
 
 
