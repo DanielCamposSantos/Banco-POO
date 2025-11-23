@@ -1,7 +1,6 @@
 package org.ucsal.poo.pf20252.br;
 
 import javafx.scene.control.Label;
-import java.util.Scanner;
 
 public abstract class Conta implements Operavel {
 	long numero;
@@ -21,8 +20,8 @@ public abstract class Conta implements Operavel {
 
     }
 
-	public void sacar(double valor) {
-		if (valor > saldo){
+	public void sacar(double valor) throws ValorInvalidoException{
+		if (valor > saldo || valor <=0){
 			throw new ValorInvalidoException();
 		}
 		saldo -= valor;
@@ -30,11 +29,12 @@ public abstract class Conta implements Operavel {
 
 
 	@Override
-	public void transferir(double valor, Conta destino) {
-		if (valor <= saldo) {
-			saldo -= valor;
-			destino.saldo += valor;
+	public void transferir(double valor, Conta destino) throws ValorInvalidoException{
+		if (valor > saldo || valor <=0) {
+			throw new ValorInvalidoException();
 		}
+		saldo -= valor;
+		destino.saldo += valor;
 
 	}
 

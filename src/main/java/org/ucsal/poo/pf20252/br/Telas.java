@@ -8,16 +8,16 @@ package org.ucsal.poo.pf20252.br;
  * @version 1.0
  */
 public enum Telas {
-    /** Tela inicial de seleção de conta */
+  
     INICIAL,
-    /** Tela principal de operações da conta */
+  
     CONTA,
-    /** Tela específica para operações de saque */
+   
     SACAR,
-    /** Tela específica para operações de depósito */
+    
     DEPOSITAR,
-    /** Tela específica para operações de transferência */
+    
     TRANSFERIR,
-    /** Tela para geração e visualização de relatórios */
+   
     RELATORIO
 }
