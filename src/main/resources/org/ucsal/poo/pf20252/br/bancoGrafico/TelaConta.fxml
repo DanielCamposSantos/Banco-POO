@@ -88,14 +88,14 @@
             </VBox>
 
             <VBox alignment="CENTER" spacing="7.0" styleClass="btn-box">
-                <Button fx:id="relatorioBtn" onAction="#onRelatorioBtnClick" styleClass="botoes-tarefas">
+                <Button fx:id="extratoBtn" onAction="#onExtratoBtnClick" styleClass="botoes-tarefas">
                     <graphic>
                         <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
-                            <Image url="@images/relatorio.png" />
+                            <Image url="@images/extrato.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Label styleClass="btn-label" text="Relatório" />
+                <Label styleClass="btn-label" text="Extrato" />
             </VBox>
         </HBox>
     </VBox>

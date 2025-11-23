@@ -18,6 +18,6 @@ public enum Telas {
     DEPOSITAR,
     
     TRANSFERIR,
-   
-    RELATORIO
+
+    EXTRATO
 }

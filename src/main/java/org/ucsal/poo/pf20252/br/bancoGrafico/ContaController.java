@@ -42,7 +42,7 @@ public class ContaController extends GeraisController{
      * Navega para a tela de relatório configurada com a conta alvo atual.
      */
     @FXML
-    protected void onRelatorioBtnClick(){
-        MainApplication.changeScreen(Telas.RELATORIO, getContaAlvo());
+    protected void onExtratoBtnClick(){
+        MainApplication.changeScreen(Telas.EXTRATO, getContaAlvo());
     }
 }
