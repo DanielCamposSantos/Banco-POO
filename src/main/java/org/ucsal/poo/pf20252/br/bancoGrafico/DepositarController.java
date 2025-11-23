@@ -31,6 +31,7 @@ public class DepositarController extends GeraisController{
             mostrarErro("Só é possível depositar valores maiores que 0,00.");
         } finally {
             getCampoInput().setText("");
+            esconderSaldo();
         }
     }
 }

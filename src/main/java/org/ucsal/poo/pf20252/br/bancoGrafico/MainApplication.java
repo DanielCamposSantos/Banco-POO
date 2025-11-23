@@ -116,18 +116,22 @@ public class MainApplication extends Application {
             case CONTA -> {
                 contaController.setContaAlvo(contaAlvo);
                 contaController.mensagemBoasVindas(contaAlvo.getCliente().getNome());
+                contaController.esconderSaldo();
                 stage.setScene(conta);
             }
             case SACAR -> {
                 sacarController.setContaAlvo(contaAlvo);
+                contaController.esconderSaldo();
                 stage.setScene(sacar);
             }
             case DEPOSITAR -> {
                 depositarController.setContaAlvo(contaAlvo);
+                contaController.esconderSaldo();
                 stage.setScene(depositar);
             }
             case TRANSFERIR -> {
                 transferirController.setContaAlvo(contaAlvo);
+                contaController.esconderSaldo();
                 stage.setScene(transferir);
             }
             default -> System.err.println("Tela inexistente");

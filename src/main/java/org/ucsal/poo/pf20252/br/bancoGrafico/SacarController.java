@@ -33,6 +33,7 @@ public class SacarController extends GeraisController{
             mostrarErro("Saldo insuficiente");
         } finally {
             getCampoInput().setText("");
+            esconderSaldo();
         }
     }
 }

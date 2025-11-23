@@ -80,7 +80,7 @@ public abstract class GeraisController  {
     /**
      * Oculta o saldo da conta.
      */
-    private void esconderSaldo() {
+    protected void esconderSaldo() {
         saldoConta.setText("*****");
     }
 

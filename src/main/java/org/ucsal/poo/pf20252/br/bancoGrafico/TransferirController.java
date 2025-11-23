@@ -62,6 +62,7 @@ public class TransferirController extends GeraisController {
         } finally {
             getCampoInput().setText("");
             numConta.setText("");
+            esconderSaldo();
         }
     }
 
