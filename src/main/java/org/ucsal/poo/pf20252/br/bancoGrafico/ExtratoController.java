@@ -58,7 +58,7 @@ public class ExtratoController extends GeraisController{
     public void gerarSaldos(){
         if (getContaAlvo() instanceof ContaPoupanca) {
             for (int i = 0; i < 12; i++) {
-                rendimentos[i].setText(String.format("%.2f",((ContaPoupanca) getContaAlvo()).getLucrosMensais()[i]));
+                rendimentos[i].setText("MODIFICAR!");
             }
             tabelaRendimento.setVisible(true);
             tabelaRendimento.setManaged(true);

@@ -53,7 +53,7 @@ public abstract class Conta implements Operavel {
 	}
 
 	protected void atualizarSaldo() {
-		//pass
+		
 	}
 
 	public void setSaldo(double saldo) {
