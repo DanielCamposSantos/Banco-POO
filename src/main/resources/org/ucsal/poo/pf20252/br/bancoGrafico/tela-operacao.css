@@ -13,7 +13,6 @@
     -fx-font-size: 18px;
 }
 
-/* Operação no canto esquerdo - CORRIGIDO */
 .operacao-container {
     -fx-alignment: center-left;
     -fx-pref-width: 150px;
@@ -39,14 +38,12 @@
     -fx-line-spacing: -5px;
 }
 
-/* Opções no canto superior direito - CORRIGIDO */
 .opcoes-container {
     -fx-alignment: center-right;
     -fx-pref-width: 150px;
     -fx-padding: 0 0 0 0;
 }
 
-/* Saldo Box */
 .saldo-box {
     -fx-background-color: linear-gradient(to right,
     rgba(255, 255, 255, 0.10) 6.31%,
@@ -96,12 +93,61 @@
     -fx-opacity: 0.6;
 }
 
-/* Campo de Texto */
 .campo-texto {
     -fx-alignment: center-left;
     -fx-pref-width: 400px;
 }
 
+
+
+
+
+.btn-voltar{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}
+
+.dados-pessoais-container {
+    -fx-alignment: center;
+    -fx-padding: 20px;
+    -fx-background-color: rgba(38, 38, 38, 0.20);
+    -fx-background-radius: 12px;
+    -fx-border-color: #262626;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+    -fx-pref-width: 600px;
+}
+
+.dados-conta-container {
+    -fx-alignment: center;
+    -fx-padding: 20px;
+    -fx-background-color: rgba(38, 38, 38, 0.20);
+    -fx-background-radius: 12px;
+    -fx-border-color: #262626;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+    -fx-pref-width: 600px;
+}
+
+.titulo-dados {
+    -fx-text-fill: #FAFAFA;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+}
+
+.dados-grid {
+    -fx-alignment: center;
+}
+
+.dados-label {
+    -fx-text-fill: #E6E6E6;
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: center-left;
+}
 .campo-label {
     -fx-text-fill: #FAFAFA;
     -fx-font-family: "System";
@@ -157,4 +203,57 @@
 .btn-voltar{
     -fx-cursor: hand;
     -fx-background-color: transparent;
+}
+
+.dados-valor {
+    -fx-text-fill: #FAFAFA;
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-wrap-text: true;
+}
+
+.grid-rendimentos {
+    -fx-padding: 10px;
+    -fx-alignment: center;
+    -fx-spacing: 50px;
+    -fx-border-color: #808080;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-pref-width: 500px;
+}
+
+.coluna {
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+}
+
+.nome-coluna {
+    -fx-text-fill: #FAFAFA;
+    -fx-font-family: "System";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.lista-meses {
+    -fx-alignment: center;
+}
+
+.item-mes {
+    -fx-text-fill: #E6E6E6;
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+}
+
+.valores {
+    -fx-alignment: center;
+}
+
+.item-rendimento {
+    -fx-text-fill: #2BFF00;
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-alignment: center;
 }

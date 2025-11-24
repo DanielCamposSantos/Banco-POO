@@ -2,10 +2,8 @@ package org.ucsal.poo.pf20252.br;
 
 
 public class ContaPoupanca extends Conta {
-	
+	private double[] lucrosMensais = new double[12];
 	private final double TAXA_DE_JUROS = 0.005;
-
-	private double extratoMensal = getSaldo();
 
     public ContaPoupanca(long numero, double saldo, Cliente cliente) {
         super(numero, saldo, cliente);
@@ -13,12 +11,14 @@ public class ContaPoupanca extends Conta {
 
 
     @Override
-    public void atualizarSaldo() {
-    	for (int i = 1; i <= 12; i ++) {
-    		extratoMensal = getSaldo()*Math.pow((1+TAXA_DE_JUROS), i);
-    		System.out.println("Saldo do mês " + i + ": " + extratoMensal);
+    protected void atualizarSaldo() {
+    	for (int i = 0; i < 12; i ++) {
+			lucrosMensais[i] = getSaldo()*Math.pow((1+TAXA_DE_JUROS), i+1);
     	}
-
 	}
 
+	public double[] getLucrosMensais() {
+		atualizarSaldo();
+		return lucrosMensais;
+	}
 }

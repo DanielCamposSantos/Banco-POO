@@ -29,11 +29,13 @@ public class MainApplication extends Application {
     private static Scene sacar;
     private static Scene depositar;
     private static Scene transferir;
+    private static Scene extrato;
 
     private static ContaController contaController;
     private static SacarController sacarController;
     private static DepositarController depositarController;
     private static TransferirController transferirController;
+    private static ExtratoController extratoController;
 
 
     private static Conta contaCorrente = new ContaCorrente(123,10000,
@@ -78,6 +80,10 @@ public class MainApplication extends Application {
         transferirController = loaderTransferir.getController();
         transferir = new Scene(fxmlTransferir);
 
+        FXMLLoader loaderExtrato = new FXMLLoader(MainApplication.class.getResource("TelaExtrato.fxml"));
+        Parent fxmlExtrato = loaderExtrato.load();
+        extratoController = loaderExtrato.getController();
+        extrato = new Scene(fxmlExtrato);
 
         stageInicial.setTitle("JavaBank");
         stageInicial.setScene(telaInicial);
@@ -97,6 +103,7 @@ public class MainApplication extends Application {
             case SACAR -> stage.setScene(sacar);
             case DEPOSITAR -> stage.setScene(depositar);
             case TRANSFERIR -> stage.setScene(transferir);
+            case EXTRATO -> stage.setScene(extrato);
 
             default -> System.err.println("Tela inesistente");
         }
@@ -113,6 +120,8 @@ public class MainApplication extends Application {
      */
     public static void changeScreen(Telas tela, Conta contaAlvo) {
         switch (tela) {
+            case INICIAL -> {
+            }
             case CONTA -> {
                 contaController.setContaAlvo(contaAlvo);
                 contaController.mensagemBoasVindas(contaAlvo.getCliente().getNome());
@@ -133,6 +142,14 @@ public class MainApplication extends Application {
                 transferirController.setContaAlvo(contaAlvo);
                 contaController.esconderSaldo();
                 stage.setScene(transferir);
+            }
+
+            case EXTRATO -> {
+                extratoController.setContaAlvo(contaAlvo);
+                extratoController.esconderSaldo();
+                extratoController.carregarInfoPessoal();
+                extratoController.gerarSaldos();
+                stage.setScene(extrato);
             }
             default -> System.err.println("Tela inexistente");
         }

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="40.0" styleClass="root-container" stylesheets="@tela-operacao.css" xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ucsal.poo.pf20252.br.bancoGrafico.ExtratoController">
+
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <HBox alignment="CENTER" prefHeight="100">
+        <VBox alignment="CENTER_LEFT" styleClass="operacao-container">
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+                <HBox styleClass="imagem-operacao">
+                    <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
+                        <Image url="@images/extrato.png" />
+                    </ImageView>
+                </HBox>
+                <Label styleClass="operacao-label" text="Extrato" />
+            </HBox>
+        </VBox>
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <VBox alignment="CENTER" spacing="10.0">
+            <ImageView fitHeight="60" fitWidth="120" preserveRatio="true">
+                <Image url="@images/logo.png" />
+            </ImageView>
+            <Label styleClass="header-title" text="Java-Bank" />
+        </VBox>
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <VBox alignment="CENTER_RIGHT" styleClass="opcoes-container">
+            <HBox alignment="CENTER_RIGHT" spacing="23.0">
+                <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                    <Image url="@images/sino.png" />
+                </ImageView>
+                <Button fx:id="menu" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voltarInicio" styleClass="btn-voltar">
+                    <graphic>
+                        <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                            <Image url="@images/menu.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="40.0">
+        <HBox alignment="CENTER" styleClass="saldo-box">
+            <HBox styleClass="saldo-container" HBox.hgrow="ALWAYS">
+                <VBox spacing="5.0">
+                    <Label styleClass="saldo-label" text="Saldo atual da poupança" />
+                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                        <Label styleClass="moeda-label" text="R$" />
+                        <Label fx:id="saldoConta" styleClass="saldo-value" text="*****" />
+                    </HBox>
+                </VBox>
+            </HBox>
+            <Button fx:id="olhoButton" onAction="#consultarSaldoBtn" styleClass="olho-button">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                        <Image url="@images/olho.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+
+        <VBox alignment="CENTER" spacing="20.0" styleClass="dados-pessoais-container">
+            <Label styleClass="titulo-dados" text="Informações Pessoais" />
+
+            <GridPane hgap="20" styleClass="dados-grid" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" minWidth="150" />
+                    <ColumnConstraints halignment="LEFT" minWidth="300" />
+                </columnConstraints>
+
+                <Label styleClass="dados-label" text="Nome Completo:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="nomeCompleto" styleClass="dados-valor" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label styleClass="dados-label" text="CPF:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="cpf" styleClass="dados-valor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label styleClass="dados-label" text="Endereço:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="endereco" styleClass="dados-valor" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+           <HBox alignment="CENTER" prefHeight="417.0" prefWidth="6.0" spacing="50" styleClass="grid-rendimentos" fx:id="tabelaRendimento">
+               <VBox alignment="CENTER" styleClass="coluna">
+                   <Label styleClass="nome-coluna" text="Mês" />
+                   <VBox spacing="10" styleClass="lista-meses">
+                       <Label styleClass="item-mes" text="1" />
+                       <Label styleClass="item-mes" text="2" />
+                       <Label styleClass="item-mes" text="3" />
+                       <Label styleClass="item-mes" text="4" />
+                       <Label styleClass="item-mes" text="5" />
+                       <Label styleClass="item-mes" text="6" />
+                       <Label styleClass="item-mes" text="7" />
+                       <Label styleClass="item-mes" text="8" />
+                       <Label styleClass="item-mes" text="9" />
+                       <Label styleClass="item-mes" text="10" />
+                       <Label styleClass="item-mes" text="11" />
+                       <Label styleClass="item-mes" text="12" />
+                   </VBox>
+               </VBox>
+
+               <VBox alignment="CENTER" styleClass="coluna">
+                   <Label styleClass="nome-coluna" text="Rendimento do Mês" />
+                   <VBox spacing="10" styleClass="valores">
+                       <Label fx:id="rendimento1" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento2" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento3" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento4" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento5" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento6" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento7" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento8" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento9" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento10" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento11" styleClass="item-rendimento" text="R$0,00" />
+                       <Label fx:id="rendimento12" styleClass="item-rendimento" text="R$0,00" />
+                   </VBox>
+               </VBox>
+           </HBox>
+        </VBox>
+    </VBox>
+</VBox>
