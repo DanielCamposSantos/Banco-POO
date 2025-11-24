@@ -1,10 +1,7 @@
 package org.ucsal.poo.pf20252.br.bancoGrafico;
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import org.ucsal.poo.pf20252.br.ContaCorrente;
 import org.ucsal.poo.pf20252.br.Telas;
 
 /**

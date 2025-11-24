@@ -148,7 +148,7 @@ public class MainApplication extends Application {
                 extratoController.setContaAlvo(contaAlvo);
                 extratoController.esconderSaldo();
                 extratoController.carregarInfoPessoal();
-                extratoController.gerarSaldos();
+                extratoController.carregarBotaoAvancarMes();
                 stage.setScene(extrato);
             }
             default -> System.err.println("Tela inexistente");
