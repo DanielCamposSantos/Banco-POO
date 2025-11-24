@@ -10,8 +10,11 @@ public class ContaCorrente extends Conta {
 
 	@Override
 	public void transferir(double valor, Conta destino)  throws ValorInvalidoException{
-		if (valor > (getSaldo() + LIMITE_SAQUE_ESPECIAL) || valor <=0) {
-			throw new ValorInvalidoException();
+		if (valor > getSaldo() + LIMITE_SAQUE_ESPECIAL){
+			throw new ValorInvalidoException("Sao insuficiente");
+		}
+		if (valor <=0){
+			throw new ValorInvalidoException("Só é possível depositar valores maiores que 0,00.");
 		}
 
 		setSaldo(getSaldo() - valor);
@@ -21,8 +24,11 @@ public class ContaCorrente extends Conta {
 	
 	@Override
 	public void sacar(double valor) throws ValorInvalidoException{
-		if (valor > (getSaldo() + LIMITE_SAQUE_ESPECIAL) || valor <=0){
-			throw new ValorInvalidoException();
+		if (valor > getSaldo() + LIMITE_SAQUE_ESPECIAL){
+			throw new ValorInvalidoException("Sao insuficiente");
+		}
+		if (valor <=0){
+			throw new ValorInvalidoException("Só é possível depositar valores maiores que 0,00.");
 		}
 		setSaldo(getSaldo() - valor);
 	}

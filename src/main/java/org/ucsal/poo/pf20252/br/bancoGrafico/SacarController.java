@@ -30,7 +30,7 @@ public class SacarController extends GeraisController{
         } catch (NumberFormatException e) {
             mostrarErro("Digite um número válido");
         } catch (ValorInvalidoException e){
-            mostrarErro("Saldo insuficiente");
+            mostrarErro(e.getMessage());
         } finally {
             getCampoInput().setText("");
             esconderSaldo();

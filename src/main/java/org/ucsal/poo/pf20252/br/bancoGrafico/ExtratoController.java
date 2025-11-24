@@ -42,7 +42,7 @@ public class ExtratoController extends GeraisController{
 
     private void alertaPassagemTempo(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("O tempo avançou em um mes");
+        alert.setContentText("O tempo avançou em um mês");
         alert.show();
     }
 

@@ -11,8 +11,9 @@ public class ValorInvalidoException extends RuntimeException {
 
     /**
      * Cria uma nova exceção indicando que o valor fornecido é inválido para a operação.
+     * @param message Mensagem personalizada para indicar o erro
      */
-    public ValorInvalidoException() {
-        super();
+    public ValorInvalidoException(String message) {
+        super(message);
     }
 }

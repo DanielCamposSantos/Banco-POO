@@ -99,5 +99,5 @@
             </GridPane>
         </VBox>
     </VBox>
-   <Button fx:id="avancarMes" mnemonicParsing="false" onAction="#clickAvancarMes" styleClass="btn-avancar-mes" text="Avançar més" />
+   <Button fx:id="avancarMes" mnemonicParsing="false" onAction="#clickAvancarMes" styleClass="btn-avancar-mes" text="Avançar mês" />
 </VBox>

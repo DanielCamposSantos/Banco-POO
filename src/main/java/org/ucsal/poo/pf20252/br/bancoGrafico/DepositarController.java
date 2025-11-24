@@ -28,7 +28,7 @@ public class DepositarController extends GeraisController{
         } catch (NumberFormatException e) {
             mostrarErro("Digite um número válido");
         } catch (ValorInvalidoException e){
-            mostrarErro("Só é possível depositar valores maiores que 0,00.");
+            mostrarErro(e.getMessage());
         } finally {
             getCampoInput().setText("");
             esconderSaldo();

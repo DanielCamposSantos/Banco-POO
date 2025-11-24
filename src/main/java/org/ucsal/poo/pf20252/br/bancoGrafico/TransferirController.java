@@ -54,9 +54,7 @@ public class TransferirController extends GeraisController {
 
         } catch (NumberFormatException e) {
             mostrarErro("Digite um número válido");
-        } catch (ValorInvalidoException e) {
-            mostrarErro("Saldo insuficiente");
-        } catch (ContaInexistenteException e){
+        } catch (ValorInvalidoException | ContaInexistenteException e) {
             mostrarErro(e.getMessage());
         } finally {
             getCampoInput().setText("");
