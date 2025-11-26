@@ -56,10 +56,10 @@ public abstract class Conta implements Operavel {
 
     public void sacar(double valor) throws ValorInvalidoException {
         if (valor > saldo) {
-            throw new ValorInvalidoException("Sao insuficiente");
+            throw new ValorInvalidoException("Saldo insuficiente");
         }
         if (valor <= 0) {
-            throw new ValorInvalidoException("Só é possível depositar valores maiores que 0,00.");
+            throw new ValorInvalidoException("Só é possível sacar valores maiores que 0,00.");
         }
         saldo -= valor;
     }
@@ -76,10 +76,10 @@ public abstract class Conta implements Operavel {
     @Override
     public void transferir(double valor, Conta destino) throws ValorInvalidoException {
         if (valor > saldo) {
-            throw new ValorInvalidoException("Sao insuficiente");
+            throw new ValorInvalidoException("Saldo insuficiente");
         }
         if (valor <= 0) {
-            throw new ValorInvalidoException("Só é possível depositar valores maiores que 0,00.");
+            throw new ValorInvalidoException("Só é possível sacar valores maiores que 0,00.");
         }
 
         this.saldo -= valor;
