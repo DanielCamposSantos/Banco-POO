@@ -1,7 +1,9 @@
-package org.ucsal.poo.pf20252.br;
+package org.ucsal.poo.pf20252.br.bancoGrafico;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import org.ucsal.poo.pf20252.br.BancoMain;
+import org.ucsal.poo.pf20252.br.Telas;
 
 /**
  * Controlador para a tela inicial da aplicação bancária.
@@ -24,7 +26,7 @@ public class InicioController {
      */
     @FXML
     protected void onContaCorrenteClick() {
-        MainApplication.changeScreen(Telas.CONTA, MainApplication.getContaCorrente());
+        BancoMain.changeScreen(Telas.CONTA, BancoMain.getContaCorrente());
     }
 
     /**
@@ -33,6 +35,6 @@ public class InicioController {
      */
     @FXML
     protected void onContaPoupancaClick() {
-        MainApplication.changeScreen(Telas.CONTA, MainApplication.getContaPoupanca());
+        BancoMain.changeScreen(Telas.CONTA, BancoMain.getContaPoupanca());
     }
 }

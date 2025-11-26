@@ -8,7 +8,7 @@
 
 <VBox alignment="CENTER" spacing="80.0" styleClass="root-container"
       stylesheets="@tela-conta.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.ucsal.poo.pf20252.br.ContaController">
+      fx:controller="org.ucsal.poo.pf20252.br.bancoGrafico.ContaController">
 
     <padding>
         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />

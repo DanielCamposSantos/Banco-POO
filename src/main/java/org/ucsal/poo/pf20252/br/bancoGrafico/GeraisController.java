@@ -1,10 +1,13 @@
-package org.ucsal.poo.pf20252.br;
+package org.ucsal.poo.pf20252.br.bancoGrafico;
 
 import javafx.scene.control.Alert;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.ucsal.poo.pf20252.br.Conta;
+import org.ucsal.poo.pf20252.br.BancoMain;
+import org.ucsal.poo.pf20252.br.Telas;
 
 
 /**
@@ -38,7 +41,7 @@ public abstract class GeraisController  {
     @FXML
     public void voltarInicio() {
         esconderSaldo();
-        MainApplication.changeScreen(Telas.INICIAL);
+        BancoMain.changeScreen(Telas.INICIAL);
     }
 
     /**

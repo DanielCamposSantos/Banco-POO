@@ -1,7 +1,11 @@
-package org.ucsal.poo.pf20252.br;
+package org.ucsal.poo.pf20252.br.bancoGrafico;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import org.ucsal.poo.pf20252.br.Conta;
+import org.ucsal.poo.pf20252.br.ContaInexistenteException;
+import org.ucsal.poo.pf20252.br.BancoMain;
+import org.ucsal.poo.pf20252.br.ValorInvalidoException;
 
 /**
  * Controlador para a tela de transferência da aplicação bancária.
@@ -16,8 +20,8 @@ import javafx.scene.control.TextField;
 public class TransferirController extends GeraisController {
     private
     Conta[] contas = {
-            MainApplication.getContaCorrente(),
-            MainApplication.getContaPoupanca()
+            BancoMain.getContaCorrente(),
+            BancoMain.getContaPoupanca()
     };
 
     private Conta contaAlvoTransferencia;

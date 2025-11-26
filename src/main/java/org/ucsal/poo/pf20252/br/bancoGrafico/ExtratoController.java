@@ -1,9 +1,10 @@
-package org.ucsal.poo.pf20252.br;
+package org.ucsal.poo.pf20252.br.bancoGrafico;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import org.ucsal.poo.pf20252.br.ContaPoupanca;
 
 
 public class ExtratoController extends GeraisController{

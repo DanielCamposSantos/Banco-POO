@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.ucsal.poo.pf20252.br.bancoGrafico.*;
 
 import java.io.IOException;
 
@@ -20,7 +21,7 @@ import java.io.IOException;
  * @see Telas
  */
 
-public class MainApplication extends Application {
+public class BancoMain extends Application {
     private static Stage stage;
 
     private static Scene telaInicial;
@@ -54,32 +55,32 @@ public class MainApplication extends Application {
         stage = stageInicial;
         stage.getIcons().add(icon);
 
-        FXMLLoader loaderMain = new FXMLLoader(MainApplication.class.getResource("TelaInicial.fxml"));
+        FXMLLoader loaderMain = new FXMLLoader(BancoMain.class.getResource("TelaInicial.fxml"));
         Parent fxmlMain = loaderMain.load();
         telaInicial = new Scene(fxmlMain);
 
-        FXMLLoader loaderConta = new FXMLLoader(MainApplication.class.getResource("TelaConta.fxml"));
+        FXMLLoader loaderConta = new FXMLLoader(BancoMain.class.getResource("TelaConta.fxml"));
         Parent fxmlConta = loaderConta.load();
         contaController = loaderConta.getController();
         conta = new Scene(fxmlConta);
 
 
-        FXMLLoader loaderSacar = new FXMLLoader(MainApplication.class.getResource("TelaSacar.fxml"));
+        FXMLLoader loaderSacar = new FXMLLoader(BancoMain.class.getResource("TelaSacar.fxml"));
         Parent fxmlSacar = loaderSacar.load();
         sacarController = loaderSacar.getController();
         sacar = new Scene(fxmlSacar);
 
-        FXMLLoader loaderDepositar = new FXMLLoader(MainApplication.class.getResource("TelaDepositar.fxml"));
+        FXMLLoader loaderDepositar = new FXMLLoader(BancoMain.class.getResource("TelaDepositar.fxml"));
         Parent fxmlDepositar = loaderDepositar.load();
         depositarController = loaderDepositar.getController();
         depositar = new Scene(fxmlDepositar);
 
-        FXMLLoader loaderTransferir = new FXMLLoader(MainApplication.class.getResource("TelaTransferir.fxml"));
+        FXMLLoader loaderTransferir = new FXMLLoader(BancoMain.class.getResource("TelaTransferir.fxml"));
         Parent fxmlTransferir = loaderTransferir.load();
         transferirController = loaderTransferir.getController();
         transferir = new Scene(fxmlTransferir);
 
-        FXMLLoader loaderExtrato = new FXMLLoader(MainApplication.class.getResource("TelaExtrato.fxml"));
+        FXMLLoader loaderExtrato = new FXMLLoader(BancoMain.class.getResource("TelaExtrato.fxml"));
         Parent fxmlExtrato = loaderExtrato.load();
         extratoController = loaderExtrato.getController();
         extrato = new Scene(fxmlExtrato);

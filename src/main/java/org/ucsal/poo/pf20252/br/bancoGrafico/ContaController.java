@@ -1,6 +1,8 @@
-package org.ucsal.poo.pf20252.br;
+package org.ucsal.poo.pf20252.br.bancoGrafico;
 
 import javafx.fxml.FXML;
+import org.ucsal.poo.pf20252.br.BancoMain;
+import org.ucsal.poo.pf20252.br.Telas;
 
 /**
  * Controlador para a tela principal de operações da conta.
@@ -18,7 +20,7 @@ public class ContaController extends GeraisController{
      */
     @FXML
     protected void onSacarBtnClick(){
-        MainApplication.changeScreen(Telas.SACAR, getContaAlvo());
+        BancoMain.changeScreen(Telas.SACAR, getContaAlvo());
     }
 
     /**
@@ -26,7 +28,7 @@ public class ContaController extends GeraisController{
      */
     @FXML
     protected void onDepositarBtnClick(){
-        MainApplication.changeScreen(Telas.DEPOSITAR, getContaAlvo());
+        BancoMain.changeScreen(Telas.DEPOSITAR, getContaAlvo());
     }
 
     /**
@@ -34,7 +36,7 @@ public class ContaController extends GeraisController{
      */
     @FXML
     protected void onTransferirBtnClick(){
-        MainApplication.changeScreen(Telas.TRANSFERIR, getContaAlvo());
+        BancoMain.changeScreen(Telas.TRANSFERIR, getContaAlvo());
     }
 
     /**
@@ -42,6 +44,6 @@ public class ContaController extends GeraisController{
      */
     @FXML
     protected void onExtratoBtnClick(){
-        MainApplication.changeScreen(Telas.EXTRATO, getContaAlvo());
+        BancoMain.changeScreen(Telas.EXTRATO, getContaAlvo());
     }
 }
