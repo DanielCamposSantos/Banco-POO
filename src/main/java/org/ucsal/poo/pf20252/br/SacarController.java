@@ -1,4 +1,4 @@
-package org.ucsal.poo.pf20252.br.bancoGrafico;
+package org.ucsal.poo.pf20252.br;
 
 import javafx.fxml.FXML;
 

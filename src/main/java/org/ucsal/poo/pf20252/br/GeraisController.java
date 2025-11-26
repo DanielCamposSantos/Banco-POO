@@ -1,12 +1,10 @@
-package org.ucsal.poo.pf20252.br.bancoGrafico;
+package org.ucsal.poo.pf20252.br;
 
 import javafx.scene.control.Alert;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.ucsal.poo.pf20252.br.Conta;
-import org.ucsal.poo.pf20252.br.Telas;
 
 
 /**
@@ -80,7 +78,7 @@ public abstract class GeraisController  {
     /**
      * Oculta o saldo da conta.
      */
-    protected void esconderSaldo() {
+    public void esconderSaldo() {
         saldoConta.setText("*****");
     }
 

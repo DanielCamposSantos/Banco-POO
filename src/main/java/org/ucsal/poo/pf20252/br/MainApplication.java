@@ -1,4 +1,4 @@
-package org.ucsal.poo.pf20252.br.bancoGrafico;
+package org.ucsal.poo.pf20252.br;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import org.ucsal.poo.pf20252.br.*;
 
 import java.io.IOException;
 

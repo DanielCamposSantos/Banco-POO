@@ -5,8 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="80.0" styleClass="root-container" stylesheets="@tela-operacao.css"
-      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ucsal.poo.pf20252.br.bancoGrafico.DepositarController">
+<VBox alignment="CENTER" spacing="80.0" styleClass="root-container" stylesheets="@tela-operacao.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ucsal.poo.pf20252.br.TransferirController">
 
     <padding>
         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
@@ -19,10 +18,10 @@
                     <children>
                         <HBox styleClass="imagem-operacao">
                             <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
-                                <Image url="@images/depositar.png" />
+                                <Image url="@images/transferir.png" />
                             </ImageView>
                         </HBox>
-                        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="operacao-label" text="Deposite já" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="operacao-label" text="Transfira já" />
                     </children>
                 </VBox>
             </HBox>
@@ -77,9 +76,11 @@
 
 
         <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="campo-texto">
-            <Label styleClass="campo-label" text="Digite quanto deseja depositar:" />
+            <Label styleClass="campo-label" text="Digite o número da conta:" />
+            <TextField fx:id="numConta" promptText="Digite um valor" styleClass="campo-input" />
+            <Label styleClass="campo-label" text="Digite quanto deseja transferir:" />
             <TextField fx:id="campoInput" promptText="Digite um valor" styleClass="campo-input" />
-            <Button onAction="#depositarBtn" styleClass="btn-confirmar" text="Depositar" />
+            <Button onAction="#transferirBtn" styleClass="btn-confirmar" text="Transferir" />
         </VBox>
     </VBox>
 </VBox>

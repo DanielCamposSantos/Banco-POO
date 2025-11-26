@@ -1,8 +1,7 @@
-package org.ucsal.poo.pf20252.br.bancoGrafico;
+package org.ucsal.poo.pf20252.br;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import org.ucsal.poo.pf20252.br.Conta;
 
 /**
  * Controlador para a tela de transferência da aplicação bancária.

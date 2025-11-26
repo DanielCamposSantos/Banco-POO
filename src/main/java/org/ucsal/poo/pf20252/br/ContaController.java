@@ -1,7 +1,6 @@
-package org.ucsal.poo.pf20252.br.bancoGrafico;
+package org.ucsal.poo.pf20252.br;
 
 import javafx.fxml.FXML;
-import org.ucsal.poo.pf20252.br.Telas;
 
 /**
  * Controlador para a tela principal de operações da conta.

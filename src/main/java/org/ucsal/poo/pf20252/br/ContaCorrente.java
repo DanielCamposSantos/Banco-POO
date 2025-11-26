@@ -1,7 +1,5 @@
 package org.ucsal.poo.pf20252.br;
 
-import org.ucsal.poo.pf20252.br.bancoGrafico.ValorInvalidoException;
-
 /**
  * Representa uma Conta Corrente, que herda as operações básicas da Conta.
  * Permite saques e transferências utilizando um limite especial (cheque especial).

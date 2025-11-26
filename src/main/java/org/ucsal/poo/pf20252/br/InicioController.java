@@ -1,8 +1,7 @@
-package org.ucsal.poo.pf20252.br.bancoGrafico;
+package org.ucsal.poo.pf20252.br;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import org.ucsal.poo.pf20252.br.Telas;
 
 /**
  * Controlador para a tela inicial da aplicação bancária.

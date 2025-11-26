@@ -1,4 +1,4 @@
-package org.ucsal.poo.pf20252.br.bancoGrafico;
+package org.ucsal.poo.pf20252.br;
 
 /**
  * Exceção lançada quando uma operação tenta acessar uma conta que não existe

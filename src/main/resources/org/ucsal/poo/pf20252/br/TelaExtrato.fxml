@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="40.0" styleClass="root-container" stylesheets="@tela-operacao.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ucsal.poo.pf20252.br.bancoGrafico.ExtratoController">
+<VBox alignment="CENTER" spacing="40.0" styleClass="root-container" stylesheets="@tela-operacao.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ucsal.poo.pf20252.br.ExtratoController">
 
     <padding>
         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />

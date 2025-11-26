@@ -1,7 +1,6 @@
 package org.ucsal.poo.pf20252.br;
 
 import javafx.scene.control.Label;
-import org.ucsal.poo.pf20252.br.bancoGrafico.ValorInvalidoException;
 
 /**
  * Classe abstrata que representa a base de todas as contas bancárias no sistema.
