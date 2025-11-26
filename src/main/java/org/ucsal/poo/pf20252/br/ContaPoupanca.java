@@ -4,7 +4,7 @@ package org.ucsal.poo.pf20252.br;
  * Representa uma Conta Poupança, que herda as operações básicas da Conta.
  * Permite o acúmulo de juros sobre o saldo.
  *
- * @author [Preencher com nome dos autores]
+ * @author Gabriela
  * @version 1.0
  * @since 2025-02
  */
