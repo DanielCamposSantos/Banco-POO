@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
  * Interface que define as operações básicas que uma conta bancária deve implementar.
  * Estabelece o contrato para funcionalidades essenciais do sistema bancário.
  *
- * @author Gabriela
+ * @author [Inserir nome do autor]
  * @version 1.0
  */
 public interface Operavel {
